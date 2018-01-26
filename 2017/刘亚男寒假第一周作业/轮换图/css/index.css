@@ -1,0 +1,124 @@
+*{
+	padding: 0px;
+	margin: 0px;
+	list-style: none;
+	text-decoration: none;
+}
+body{
+	padding:100px 30% 50px 30%;
+}
+a:hover{
+	text-decoration: none;
+}
+a:link{
+	text-decoration: none;
+}
+#img1{
+	margin-left:100%;
+	width: 500px;
+	height: 280px;
+}
+#img2{
+	margin-left: 200%;
+	position: relative;
+	top:-286px;
+	width: 500px;
+	height: 285px;
+}
+#img3{
+	margin-left: 300%;
+	position: relative;
+	top:-575px;
+	width: 500px;
+	height: 285.5px;
+}
+#img4{
+	margin-left: 400%;
+	position: relative;
+	top:-864px;
+	width: 500px;
+	height: 286px;
+}
+#img5{
+	margin-left:500%;
+	position: relative;
+	top:-1153.5px;
+	width: 500px;
+	height: 286px;
+}
+#img6{
+	margin-left:600%;
+	position: relative;
+	top:-1443px;
+	width: 500px;
+	height: 286px;
+}
+#img7{
+	margin-left:700%;
+	position: relative;
+	top:-1732px;
+	width: 500px;
+	height: 286px;
+}
+.boxshow{
+	position: relative;
+    width:500px;
+    height:280px;
+    border: 3px solid #333;
+    overflow:hidden;
+}
+#list{
+    position: absolute;
+    z-index: 1;
+    width:100%;
+    height: 400px;
+}
+#buttons{
+    position: absolute;
+    left:30%;
+    bottom: 20px;
+    z-index: 2;
+    height:10px;
+    width:150px;
+}
+#buttons span{
+    float: left;
+    margin-right:5px;
+    margin-top:15px;
+    width: 7px;
+    height:7px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: #333;
+    cursor:pointer;
+}
+#buttons .on{
+    background: orangered;
+}
+.arrow{
+    position: absolute;
+    top: 125px;
+    z-index: 2;
+    display: none;
+    width: 40px;
+    height: 40px;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 39px;
+    text-align: center;
+    color: #fff;
+    background-color: RGBA(0, 0, 0, .3);
+    cursor: pointer;
+}       
+.arrow:hover{
+    background-color: RGBA(0, 0, 0, .7);
+}
+.boxshow:hover .arrow{
+    display: block;
+}     
+#prev{
+    left: 20px;
+}      
+#next{
+    right: 20px;
+}
