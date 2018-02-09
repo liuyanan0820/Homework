@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>验证码</title>
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body onload="createCode()">
+		<script type="text/javascript" src="js/index.js" ></script>
+        <form id="form1" runat="server" onsubmit="validateCode()">
+            <div>
+                <table border="0" cellspacing="5" cellpadding="5" >
+                    <tr>
+                        <td></td><td> <div class="code" id="checkCode" onclick="createCode()" ></div></td>
+                        <td><a  href="#" onclick="createCode()">看不清换一张</a></td>
+                    </tr>
+                    <tr>
+                        <td>验证码：</td><td><input  style="float:left;" type="text"   id="inputCode" /></td><td>请输入验证码</td>
+                    </tr>
+                    <tr>
+                	    <td></td>
+                	    <td><input id="Button1"  onclick="validateCode();" type="button" value="确定" /></td>
+                	    <td></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+	</body>
+</html>
