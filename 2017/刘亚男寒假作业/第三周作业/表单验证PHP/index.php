@@ -1,0 +1,30 @@
+<?php
+	if(!sset($_POST['send'])||$_POST['send']!='提交'){
+		header('Location:index.php');
+		exit;
+	}
+	$username=trim($_POST['username']);
+	$password=$_POST['password'];
+	$code=trim($_POST['code']);
+	$email=trim($_POST['email']);
+	$content=htmlspecialchars(trim($_POST['content']));
+	if(strlen($username)<2||strlen($username)>10){
+		echo"<script>alert('用户名不能小于两位或者大于十位');history.back();</script>";
+		exit;
+	}
+	if(strlen($password)<6||strlen($password)>18){
+		echo"<script>alert('密码不能小于6位且不能大于18位');history.back();</script>";
+		exit;
+	}
+	if(strlen($code)!=4||is_numeric($code)){
+		echo"<script>alert('验证码必须是4位并且是纯数字');history.back();</script>";
+		exit;
+	}
+	if(!preg_match('/^（[\w\.]{2,255})@([\w\-]{1,255}).([a-z]{2,4})$/',$email)){
+		echo"<script>a2('电子邮箱格式不正确');h2.back();</script>";
+		exit;
+	}
+	echo'用户名：'.$username.'<br />';
+	echo'电子邮箱：'.$email.'<br/>';
+	echo'个人介绍：'.$content;
+?>
