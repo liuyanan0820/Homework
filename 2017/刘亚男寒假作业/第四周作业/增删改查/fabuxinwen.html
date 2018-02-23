@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>新闻发布</title>
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<div style="width: 100%;text-align: center;">
+			<h1>发布新闻</h1>
+			<form method="post">
+				<input type="hidden" name="newsid" />
+				<table style="margin: 0 auto;text-align: left;">
+					<tr>
+						<td>标题：</td>
+						<td><input type="text" style="width: 400px;" name="title"/></td>
+					</tr>
+					<tr>
+						<td>作者：</td>
+						<td><input type="text" style="width: 400px;" name="Author"/></td>
+					</tr>
+					<tr>
+						<td>来源：</td>
+						<td><input type="text" style="width: 400px;" name="source"/></td>
+					</tr>
+					<tr>
+						<td>内容：</td>
+						<td><textarea cols="auto" rows="auto" style="width: 400px;height: 400px;" name="content"></textarea></td>
+					</tr>
+				</table>
+				<br />
+				<?php
+					$time=date('y-m-d h:i:s');
+					echo"<input type=\"hidden\" name\"time\" value=\"{$time}\"/>";
+				?>
+				<input type="submit" value="提交" formaction="tijiao.php" />
+				<a href="chakan.html"><input type="button" value="查看"/></a>
+			</form>
+		</div>
+	</body>
+</html>

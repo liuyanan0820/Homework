@@ -1,0 +1,19 @@
+*{
+	text-decoration: none;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+a:link{
+	color: darkslategrey;
+}
+a:hover{
+	color: darkslategrey;
+}
+a:visited{
+	color: darkslategrey;
+}
+.All{
+	margin-top: 100px;
+	margin-left: 25%;
+}
