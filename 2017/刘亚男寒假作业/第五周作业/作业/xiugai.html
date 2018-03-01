@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>修改新闻</title>
+		<link rel="stylesheet" href="css/xiugaixinwen.css" />
+	</head>
+	<body>
+		<div class="nav">
+			<a href="denglu.html" id="denglu">登陆</h1>
+			<a href="zhuc.html" id="zhuce">注册</a>
+			<hr width="95%" color="cornflowerblue" />
+		</div>
+		<?php
+			$id=$_GET["newsid"];
+			$db=new mysqli("localhost","root","","newsystem");
+			!mysqli_connect_error() or die("连接错误")；
+			$sql="select*form news where newsid='{$id}'";
+			$result=$db->query($sql);
+            $attr=$result->fetch_row();
+		?>
+		<div class="main" >
+            <h2>修改新闻</h2>
+            <form action="xiugai.php" method="post">
+                <input type="hidden" name="newsid" <?php echo "value='{$attr[0]}'";?>
+                <table style="margin:0 auto; text-align:left" >
+                    <tr>
+                        <td >标题：</td><td><input type="text" style="width:400px" name="title" <?php echo "value='{$attr[1]}'";?></td>
+                    </tr>
+                    <tr>
+                        <td >作者：</td>
+                        <td><input type="text" style="width:400px" name="Author" <?php echo "value='{$attr[2]}'";?></td>
+                    </tr>
+                    <tr>
+                        <td >来源：</td>
+                        <td><input type="text" style="width:400px" name="source" <?php echo "value='{$attr[3]}'";?></td>
+                    </tr>
+                    <tr>
+                        <td >内容：</td>
+                        <td><textarea cols="auto" rows="auto" style="width:400px; height:400px" name="content" <?php echo "{$attr[4]}";?></textarea></td>
+                    </tr>
+                </table>
+                <br />
+                <?php
+                    $time = date('y-m-d h:i:s');
+                    echo "<input type=\"hidden\" name=\"time\" value=\"{$time}\"/>";
+                ?>
+                <div>
+                	<a href="chakan.html">
+                		<input type="button" title="查看" value="查看" />
+                	</a>
+                	<input type="submit" title="修改" value="修改"/>
+                </div>
+            </form>
+	</body>
+</html>

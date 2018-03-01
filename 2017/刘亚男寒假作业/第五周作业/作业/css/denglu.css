@@ -1,0 +1,55 @@
+*{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	text-decoration: none;
+}
+.ALL{
+	width: 800px;
+	font-family: "黑体";
+	margin: 50px auto;
+}
+#titles{
+	font-weight: bold;
+	font-size: 20px;
+	height: 50px;
+	line-height: 50px;
+	background:#FF9F3;
+	text-align: center;
+	border: 1px solid #CCC;
+}
+.low{
+	font-size:20px;
+	color: midnightblue;
+	margin-left: 20px;
+	font-family: "宋体";
+}
+#contents{
+	margin-top: 20px;
+	background: #FF9F3;
+	border: 1px solid #CCC;
+}
+#form-itemGroup{
+	padding:100px;
+	text-align: center;
+}
+.Bt{
+	width: 50px;
+	height: 35px;
+	line-height: 35px;
+	background-color:beige;
+	margin-bottom: 10px;
+	color:darkolivegreen;
+	font-weight: bold;
+	border: none;
+}
+.BT{
+	width:70px;
+	height: 35px;
+	line-height: 35px;
+	background-color:beige;
+	margin-bottom: 10px;
+	color:darkolivegreen;
+	font-weight: bold;
+	border: none;
+}
