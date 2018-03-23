@@ -1,0 +1,30 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	text-align: center;
+	
+}
+ul li{
+	float: left;
+	background:#999999 ;
+	width: 50px;
+	height: 50px;
+	line-height: 50px;
+	 cursor: pointer;
+}
+#calcu-head{
+	margin-top: 50px;
+}
+.screen{
+	width: 200px;
+	position: relative;
+	left: 35px;
+	top: 5px;
+	text-align: left;
+}
+#calcu-btn{
+	margin-left: 40%;
+	margin-top: 20px;
+}
