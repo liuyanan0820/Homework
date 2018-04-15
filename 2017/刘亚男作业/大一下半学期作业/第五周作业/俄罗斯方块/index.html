@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>万年历</title>
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+        <form name="CLD" class="content">
+            <table>
+                <tr class="header">
+                    <td colSpan=7><span>公历</span>
+                        <select name="SY" onchange="changeCld();">
+                            <script type="text/javascript">
+                                for(i=1900;i<2050;i++) document.write('<option>'+i);
+                            </script>
+                        </select><span>年</span>
+                        <select name="SM" onchange="changeCld();">
+                            <script type="text/javascript">
+                                for(i=1;i<13;i++) document.write('<option>'+i);
+                        </script>
+                        </select><span>月</span><span id="GZ"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td width="54px">日</td>
+                    <td width="54px">一</td>
+                    <td width="54px">二</td>
+                    <td width="54px">三</td>
+                    <td width="54px">四</td>
+                    <td width="54px">五</td>
+                    <td width="54px">六</td>
+                </tr>            
+                <script type="text/javascript">
+                    var gNum;
+                    for(i=0;i<6;i++) {
+                        document.write('<tr>');
+                        for(j=0;j<7;j++) {
+                            gNum = i*7+j;
+                            document.write('<td id="GD' + gNum +'"><font id="SD' + gNum +'"');
+                            if(j == 0) document.write('color="red"');
+                            if(j == 6) document.write('color="blue"');
+                            document.write('></font><br/><font id="LD' + gNum + '" "></font></td>');
+                        }
+                        document.write('</tr>');
+                    }
+                </script>
+            </table>
+        </form>
+        <script type="text/javascript" src="js/index.js"></script>
+	</body>
+</html>
